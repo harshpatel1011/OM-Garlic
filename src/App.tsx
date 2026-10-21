@@ -102,7 +102,7 @@ export function App() {
       </main>
 
       {/* Rich Footer */}
-      <Footer />
+      <Footer onOpenOrderModal={() => handleOpenOrder()} />
 
       {/* Mobile Sticky Bottom Navigation Dock */}
       <MobileBottomNav onOpenOrderModal={() => handleOpenOrder()} />
