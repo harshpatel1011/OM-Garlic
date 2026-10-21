@@ -105,44 +105,44 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
 
           {/* Right Action Buttons */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            {/* Phone Quick Dial */}
+            {/* Phone Quick Dial - Desktop Only */}
             <a
               href={`tel:${COMPANY_INFO.phones.primary.replace(/\s+/g, '')}`}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-[#2D4A22] bg-[#F2F7EF] border border-[#2D4A22]/15 hover:bg-[#E5EFE1] transition-all"
+              className="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold text-[#2D4A22] bg-[#F2F7EF] border border-[#2D4A22]/15 hover:bg-[#E5EFE1] transition-all"
             >
               <Phone className="w-3.5 h-3.5 text-[#C59B27]" />
-              <span className="hidden md:inline">Call Sales</span>
+              <span className="hidden xl:inline">Call Sales</span>
             </a>
 
-            {/* Primary Order Button */}
+            {/* Primary Order Button - Desktop Only */}
             <button
               onClick={onOpenOrderModal}
-              className="relative overflow-hidden inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shimmer-effect bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22]"
+              className="hidden lg:inline-flex relative overflow-hidden items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shimmer-effect bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22]"
             >
               <span>Order Now</span>
               <ArrowRight className="w-3.5 h-3.5 shrink-0" />
             </button>
 
-            {/* Mobile Hamburger Button */}
+            {/* Mobile Hamburger Menu Bar Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
               aria-expanded={mobileMenuOpen}
-              className="flex lg:hidden flex-col justify-center items-center gap-[5px] w-9 h-9 p-1.5 rounded-xl bg-[#F2F7EF] border border-[#2D4A22]/10 cursor-pointer text-[#2D4A22] hover:bg-[#E5EFE1] transition-colors"
+              className="flex lg:hidden flex-col justify-center items-center gap-[5px] w-10 h-10 p-2 rounded-xl bg-[#F2F7EF] border border-[#2D4A22]/15 cursor-pointer text-[#2D4A22] hover:bg-[#E5EFE1] active:scale-95 transition-all shadow-xs"
             >
               <span
-                className={`block w-5 h-[2px] rounded-full bg-[#2D4A22] transition-all duration-300 origin-center ${
-                  mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''
+                className={`block w-5 h-[2.5px] rounded-full bg-[#2D4A22] transition-all duration-300 origin-center ${
+                  mobileMenuOpen ? 'rotate-45 translate-y-[7.5px]' : ''
                 }`}
               />
               <span
-                className={`block w-5 h-[2px] rounded-full bg-[#2D4A22] transition-all duration-300 ${
+                className={`block w-5 h-[2.5px] rounded-full bg-[#2D4A22] transition-all duration-300 ${
                   mobileMenuOpen ? 'opacity-0 scale-x-0' : ''
                 }`}
               />
               <span
-                className={`block w-5 h-[2px] rounded-full bg-[#2D4A22] transition-all duration-300 origin-center ${
-                  mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''
+                className={`block w-5 h-[2.5px] rounded-full bg-[#2D4A22] transition-all duration-300 origin-center ${
+                  mobileMenuOpen ? '-rotate-45 -translate-y-[7.5px]' : ''
                 }`}
               />
             </button>
