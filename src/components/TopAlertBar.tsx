@@ -33,7 +33,7 @@ export const TopAlertBar: React.FC<TopAlertBarProps> = ({ isVisible }) => {
         </div>
         <div className="hidden lg:flex items-center gap-1 text-white/80">
           <MapPin className="w-3 h-3 text-[#C59B27]" />
-          <span>Nikol & Kathwada</span>
+          <span>Kathwada, Ahmedabad</span>
         </div>
         <a
           href={`tel:${COMPANY_INFO.phones.primary.replace(/\s+/g, '')}`}

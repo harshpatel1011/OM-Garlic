@@ -16,7 +16,7 @@ export const COMPANY_INFO = {
   email: 'omenterprise.garlic@gmail.com',
   address: {
     plant: '79 VR Industrial Park-2, Kathwada Singarwa Road, Kathwada, Ahmedabad, Gujarat - 382430',
-    hub: 'Nikol, Ahmedabad, Gujarat',
+    hub: 'Kathwada, Ahmedabad, Gujarat',
   },
   openingEvent: {
     date: '20-10-2026',

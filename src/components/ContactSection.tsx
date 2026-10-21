@@ -151,8 +151,8 @@ Notes: ${formData.notes || 'None'}`;
               <div className="flex items-start gap-3 pt-2 border-t border-white/10">
                 <MapPin className="w-4 h-4 text-[#74A746] shrink-0 mt-1" />
                 <div className="text-xs">
-                  <span className="font-bold text-[#74A746] block">Distribution Hub:</span>
-                  <p className="text-white/85 m-0">{COMPANY_INFO.address.hub}</p>
+                  <span className="font-bold text-[#74A746] block">Facility & Dispatch:</span>
+                  <p className="text-white/85 m-0">{COMPANY_INFO.address.plant}</p>
                 </div>
               </div>
 
@@ -245,7 +245,7 @@ Notes: ${formData.notes || 'None'}`;
                   <label className="font-bold text-gray-700 block mb-1">Delivery Area / Address in Ahmedabad</label>
                   <input
                     type="text"
-                    placeholder="e.g. Nikol, Kathwada, SG Highway, Naroda..."
+                    placeholder="e.g. Nikol, Kathwada, SG Highway, Naroda, Vastral, Prahlad Nagar..."
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2]"

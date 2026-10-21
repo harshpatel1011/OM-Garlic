@@ -176,7 +176,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Row */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <p className="m-0 text-center sm:text-left">
-            © {new Date().getFullYear()} OM Enterprise. All rights reserved. • Nikol & Kathwada, Ahmedabad, Gujarat.
+            © {new Date().getFullYear()} OM Enterprise. All rights reserved. • Kathwada, Ahmedabad, Gujarat.
           </p>
 
           <button

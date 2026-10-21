@@ -164,7 +164,7 @@ Delivery Area: ${area || 'Ahmedabad'}`;
             <input
               type="text"
               required
-              placeholder="e.g. Nikol, Kathwada, SG Highway, Prahlad Nagar..."
+              placeholder="e.g. Nikol, Kathwada, SG Highway, Prahlad Nagar, Naroda..."
               value={area}
               onChange={(e) => setArea(e.target.value)}
               className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2]"
