@@ -74,11 +74,11 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ onOpenOrde
 
           {/* Right Column: Interactive Slider & Metrics Card */}
           <div className="lg:col-span-7">
-            <div className="rounded-3xl p-6 sm:p-8 bg-white border-2 border-[#C59B27]/40 shadow-[0_12px_40px_rgba(45,74,34,0.10)] relative overflow-hidden">
-              {/* Top accent */}
-              <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22]" />
+            <div className="rounded-3xl overflow-hidden bg-white border-2 border-[#C59B27]/40 shadow-[0_12px_40px_rgba(45,74,34,0.10)] relative">
+              <div className="h-2 w-full bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22]" />
 
-              {/* Slider Control */}
+              <div className="p-6 sm:p-8">
+                {/* Slider Control */}
               <div className="mb-8">
                 <div className="flex items-center justify-between mb-3">
                   <label htmlFor="garlic-slider" className="text-xs sm:text-sm font-bold text-gray-700">
@@ -162,6 +162,7 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ onOpenOrde
                   <ArrowRight className="w-3.5 h-3.5 text-[#C59B27]" />
                 </button>
               </div>
+            </div>
             </div>
           </div>
         </div>

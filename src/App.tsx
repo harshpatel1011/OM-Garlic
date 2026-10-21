@@ -9,7 +9,6 @@ import { IndustriesSection } from './components/IndustriesSection';
 import { ProductsSection } from './components/ProductsSection';
 import { SavingsCalculator } from './components/SavingsCalculator';
 import { GrandOpeningSection } from './components/GrandOpeningSection';
-import { TestimonialsSection } from './components/TestimonialsSection';
 import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -94,9 +93,6 @@ export function App() {
 
         {/* Grand Opening Ceremony (Patel Family & Kathwada Venue) */}
         <GrandOpeningSection onOpenOrderModal={() => handleOpenOrder()} />
-
-        {/* Client Reviews & Testimonials */}
-        <TestimonialsSection />
 
         {/* FAQ Accordion */}
         <FaqSection />

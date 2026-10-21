@@ -1,4 +1,4 @@
-import type { FeatureItem, ProductItem, IndustryItem, TestimonialItem, FaqItem } from '../types';
+import type { FeatureItem, ProductItem, IndustryItem, FaqItem } from '../types';
 
 export const COMPANY_INFO = {
   name: 'OM Enterprise',
@@ -216,7 +216,6 @@ export const PRODUCTS_ITEMS: ProductItem[] = [
     minOrder: '5 Kg',
     shelfLife: '15-20 Days (at 2-4°C)',
     packaging: '5kg, 10kg & 20kg Vacuum Sealed Sacks',
-    image: '/images/flyer-product.jpg',
     bestFor: ['Hotels & Resorts', 'Fine Dining Restaurants', 'Catering Events'],
     specs: {
       purity: '99.9%',
@@ -234,7 +233,6 @@ export const PRODUCTS_ITEMS: ProductItem[] = [
     minOrder: '5 Kg',
     shelfLife: '15 Days (at 2-4°C)',
     packaging: '5kg, 10kg & 20kg Food-Grade Pouches',
-    image: '/images/flyer-product.jpg',
     bestFor: ['Commercial Restaurants', 'Dhabas', 'Cloud Kitchens', 'Catering Units'],
     specs: {
       purity: '99.5%',
@@ -252,7 +250,6 @@ export const PRODUCTS_ITEMS: ProductItem[] = [
     minOrder: '10 Kg',
     shelfLife: '10-12 Days (Chilled)',
     packaging: '5kg & 10kg Food-Grade Pails / Pouches',
-    image: '/images/flyer-product.jpg',
     bestFor: ['Sauce & Gravy Bases', 'Fast Food Central Kitchens', 'Bulk Catering'],
     specs: {
       purity: '100% Pure Garlic',
@@ -270,7 +267,6 @@ export const PRODUCTS_ITEMS: ProductItem[] = [
     minOrder: '50 Kg',
     shelfLife: '20+ Days (Cold Chain)',
     packaging: '20kg & 50kg Sealed Heavy Sacks',
-    image: '/images/flyer-product.jpg',
     bestFor: ['Food Processing Plants', 'Paste Manufacturers', 'Bulk Wholesalers'],
     specs: {
       purity: '99.8%',
@@ -278,53 +274,6 @@ export const PRODUCTS_ITEMS: ProductItem[] = [
       cloveSize: 'Mixed Grade Sorted',
       preservatives: '0% (Nil)',
     },
-  },
-];
-
-export const TESTIMONIALS_ITEMS: TestimonialItem[] = [
-  {
-    id: 't1',
-    name: 'Chef Rajesh Sharma',
-    role: 'Executive Head Chef',
-    company: 'The Grand Heritage Banquet & Hotel',
-    location: 'Kathwada, Ahmedabad',
-    rating: 5,
-    content:
-      'We prepare food for 800+ guests during wedding season. OM Enterprise peeled garlic has been a lifesaver. The cloves are spotless, crisp, and smell intensely fresh. Not a single rotten clove in our bulk deliveries!',
-    avatarText: 'RS',
-  },
-  {
-    id: 't2',
-    name: 'Bhavin Patel',
-    role: 'Managing Partner',
-    company: 'Kathiyawadi Swad Restaurant Chain',
-    location: 'Nikol, Ahmedabad',
-    rating: 5,
-    content:
-      'Our Lasaniya Bataka and garlic chutney demand authentic pungent garlic. Traditional pre-peeled garlic in market smells of chemicals, but OM Enterprise garlic is 100% natural and delivered fresh every morning at 7:30 AM.',
-    avatarText: 'BP',
-  },
-  {
-    id: 't3',
-    name: 'Mehul Trivedi',
-    role: 'Operations Director',
-    company: 'SpicyBites Cloud Kitchens (4 Outlets)',
-    location: 'Bopal & Naroda, Ahmedabad',
-    rating: 5,
-    content:
-      'Switching to OM Enterprise saved us at least ₹18,000 monthly in helper wages and eliminated 2 hours of morning prep time per outlet. Their vacuum packaging keeps the cloves fresh for weeks.',
-    avatarText: 'MT',
-  },
-  {
-    id: 't4',
-    name: 'Ketanbhai Mehta',
-    role: 'Proprietor & Master Caterer',
-    company: 'Swagath Caterers & Event Managers',
-    location: 'Kathwada, Ahmedabad',
-    rating: 5,
-    content:
-      'During wedding season, we cater events with 1,500+ attendees. Peeling 80kg of garlic was our biggest headache. OM Enterprise delivers top-grade machine-peeled garlic right to our base kitchen every morning without a single day delay.',
-    avatarText: 'KM',
   },
 ];
 

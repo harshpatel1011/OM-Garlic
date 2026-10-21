@@ -19,9 +19,9 @@ export const QuickStats: React.FC = () => {
     },
     {
       icon: Users,
-      value: '100+',
-      label: 'Commercial Clients',
-      desc: 'Hotels, banquet halls & restaurants in Ahmedabad',
+      value: 'Direct',
+      label: 'Factory Wholesale',
+      desc: 'Zero middlemen or broker markups on your kitchen orders',
       color: '#C59B27',
     },
     {

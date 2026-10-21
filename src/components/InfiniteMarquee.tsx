@@ -7,9 +7,9 @@ export const InfiniteMarquee: React.FC = () => {
     { text: '100% Machine Peeled & Spotless Cloves', icon: Sparkles },
     { text: 'Zero Chemical Bleach or Preservatives', icon: Leaf },
     { text: 'Daily Morning Delivery in Ahmedabad', icon: Truck },
-    { text: 'Trusted by 100+ Hotels & Restaurants', icon: Hotel },
+    { text: 'Inaugural Wholesale Launch Rates Available', icon: Award },
     { text: 'Saves 70% Kitchen Prep Time & Labor', icon: Clock },
-    { text: '1kg, 5kg, 10kg & 20kg Vacuum Packaging', icon: Package },
+    { text: '5kg, 10kg, 20kg & 50kg Vacuum Packaging', icon: Package },
     { text: 'Direct Factory Wholesale Pricing', icon: Award },
     { text: `Call Orders: ${COMPANY_INFO.phones.primary}`, icon: Phone },
   ];

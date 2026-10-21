@@ -6,9 +6,11 @@ import {
   Truck,
   Leaf,
   Clock,
-  CheckCircle,
   Calculator,
-  PhoneCall,
+  Award,
+  Package,
+  Building2,
+  CheckCircle2,
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/garlicData';
 
@@ -21,148 +23,140 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onScrollToCalculat
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#122411] via-[#1B3417] to-[#142813] text-white pt-28 sm:pt-36 pb-12 sm:pb-16"
+      className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#10220F] via-[#1A3316] to-[#122310] text-white pt-28 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 font-sans"
     >
-      {/* Ambient background glow & organic blur lights */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#C59B27]/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-10 right-10 w-[350px] h-[350px] bg-[#446E33]/25 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-20 left-10 w-[320px] h-[320px] bg-[#C59B27]/10 rounded-full blur-[100px] pointer-events-none" />
+      {/* Background ambient lighting effects */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[#C59B27]/12 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-12 left-10 w-[350px] h-[350px] bg-[#446E33]/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-16 right-10 w-[380px] h-[380px] bg-[#C59B27]/10 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Floating Badges (Desktop Only, matching Kevalon's roam animations) */}
-      <div className="hidden xl:flex absolute top-[28%] left-[5%] z-10 animate-roam-a items-center gap-2.5 px-4 py-2 rounded-full bg-[#122411]/80 backdrop-blur-md border border-[#C59B27]/40 shadow-lg text-xs font-semibold text-[#FDF8E8]">
+      {/* Floating Badges (Visible ONLY on extra-wide screens 2xl and positioned strictly in outer margins) */}
+      <div className="hidden 2xl:inline-flex absolute top-[36%] left-[3%] z-10 animate-roam-a items-center gap-2 px-4 py-2 rounded-full bg-[#10220F]/85 backdrop-blur-md border border-[#C59B27]/40 shadow-xl text-xs font-semibold text-[#FDF8E8] pointer-events-none">
         <Truck className="w-4 h-4 text-[#E5B945]" />
-        <span>Daily Ahmedabad Morning Delivery</span>
+        <span>Daily Morning Delivery (7:00 AM)</span>
       </div>
 
-      <div className="hidden xl:flex absolute top-[45%] right-[5%] z-10 animate-roam-b items-center gap-2.5 px-4 py-2 rounded-full bg-[#122411]/80 backdrop-blur-md border border-[#446E33]/60 shadow-lg text-xs font-semibold text-[#FDF8E8]">
+      <div className="hidden 2xl:inline-flex absolute top-[34%] right-[3%] z-10 animate-roam-b items-center gap-2 px-4 py-2 rounded-full bg-[#10220F]/85 backdrop-blur-md border border-[#74A746]/50 shadow-xl text-xs font-semibold text-[#FDF8E8] pointer-events-none">
         <Leaf className="w-4 h-4 text-[#74A746]" />
-        <span>100% Pure • No Bleach / Preservatives</span>
+        <span>100% Pure • No Chemical Bleach</span>
       </div>
 
-      <div className="hidden xl:flex absolute bottom-[22%] left-[8%] z-10 animate-roam-c items-center gap-2.5 px-4 py-2 rounded-full bg-[#122411]/80 backdrop-blur-md border border-[#C59B27]/40 shadow-lg text-xs font-semibold text-[#FDF8E8]">
-        <Clock className="w-4 h-4 text-[#E5B945]" />
-        <span>Saves 70% Kitchen Prep Time & Labor</span>
+      <div className="hidden 2xl:inline-flex absolute top-[62%] right-[4%] z-10 animate-roam-c items-center gap-2 px-4 py-2 rounded-full bg-[#10220F]/85 backdrop-blur-md border border-[#C59B27]/40 shadow-xl text-xs font-semibold text-[#FDF8E8] pointer-events-none">
+        <Award className="w-4 h-4 text-[#E5B945]" />
+        <span>Direct Factory Wholesale Pricing</span>
       </div>
 
-      {/* Main Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Headlines & Actions */}
-          <div className="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start">
-            {/* Top Pill Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#C59B27]/50 text-[#FDF8E8] text-xs font-bold tracking-wide uppercase mb-5 sm:mb-6 shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-[#E5B945]" />
-              <span>100% Machine Peeled & Hand Inspected</span>
+      {/* Main Centered Content Container (Kevalon-style Majestic Centered Layout) */}
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center items-center text-center">
+        {/* Eyebrow Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#C59B27]/50 text-[#FDF8E8] text-xs font-bold tracking-wider uppercase mb-5 sm:mb-6 shadow-sm">
+          <Sparkles className="w-3.5 h-3.5 text-[#E5B945]" />
+          <span>Automated Processing Unit • Kathwada, Ahmedabad</span>
+        </div>
+
+        {/* Main Headline with Serif Typography */}
+        <h1 className="mb-5 sm:mb-7 flex flex-col gap-1 sm:gap-2 w-full m-0 p-0">
+          <span className="font-serif-heading font-bold text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-[#E5B945] tracking-tight">
+            Freshly Peeled Garlic
+          </span>
+          <span className="font-serif-heading font-extrabold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.08]">
+            Quality You Can Trust.
+          </span>
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-sm sm:text-base md:text-lg leading-relaxed sm:leading-relaxed text-[#E1EBD7] max-w-2xl mb-8 sm:mb-10 font-normal px-2 sm:px-0">
+          Ahmedabad’s premier wholesale processor of 100% natural, machine-peeled garlic cloves.
+          Zero chemical bleach, zero kitchen waste, and dependable morning bulk delivery for{' '}
+          <span className="text-[#F4CE6A] font-semibold">Hotels & Banquets</span>,{' '}
+          <span className="text-[#F4CE6A] font-semibold">Restaurants</span>,{' '}
+          <span className="text-[#F4CE6A] font-semibold">Caterers</span>, and{' '}
+          <span className="text-[#F4CE6A] font-semibold">Food Processing Plants</span>.
+        </p>
+
+        {/* Dual Centered CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-10 sm:mb-14">
+          {/* Primary Wholesale Order Button */}
+          <button
+            onClick={onOpenOrderModal}
+            className="w-full sm:w-auto relative overflow-hidden inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-sm sm:text-base font-bold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shimmer-effect bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22] border border-[#E5B945]/40"
+          >
+            <span>Book Wholesale Order</span>
+            <ArrowRight className="w-4 h-4 shrink-0" />
+          </button>
+
+          {/* Secondary Calculator Button */}
+          <button
+            onClick={onScrollToCalculator}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-white bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/25 transition-all cursor-pointer"
+          >
+            <Calculator className="w-4 h-4 text-[#E5B945]" />
+            <span>Calculate Kitchen Savings</span>
+          </button>
+        </div>
+
+        {/* 4 Clean Glassmorphism Highlight Cards (Centered & Balanced) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl pt-4">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-left flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-[#C59B27]/25 text-[#E5B945] flex items-center justify-center shrink-0 border border-[#C59B27]/40">
+              <CheckCircle2 className="w-5 h-5" />
             </div>
-
-            {/* Main Headline */}
-            <h1 className="font-serif-heading font-extrabold text-3xl xs:text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12] mb-4 sm:mb-6 text-white">
-              Freshly Peeled Garlic.{' '}
-              <span className="block mt-1 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-[#E5B945] via-[#F4CE6A] to-[#D4A346]">
-                Quality You Can Trust.
+            <div>
+              <span className="font-bold text-xs sm:text-sm text-white block leading-tight">
+                99.9% Purity
               </span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base lg:text-lg text-[#E3ECD9] leading-relaxed max-w-xl mb-7 sm:mb-9 font-normal">
-              Direct factory supply of crisp, spotless, and hygienic peeled garlic cloves. Zero
-              chemicals, zero food waste, and ready-to-cook daily morning delivery for{' '}
-              <span className="text-[#F4CE6A] font-semibold">Hotels & Banquets</span>,{' '}
-              <span className="text-[#F4CE6A] font-semibold">Restaurants</span>,{' '}
-              <span className="text-[#F4CE6A] font-semibold">Catering Operations</span>, and{' '}
-              <span className="text-[#F4CE6A] font-semibold">Food Processing Plants</span> across Ahmedabad & Gujarat.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
-              {/* Primary Wholesale Order Button */}
-              <button
-                onClick={onOpenOrderModal}
-                className="w-full sm:w-auto relative overflow-hidden inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm sm:text-base font-bold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shimmer-effect bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22] border border-[#E5B945]/40"
-              >
-                <span>Book Wholesale Order</span>
-                <ArrowRight className="w-4 h-4 shrink-0" />
-              </button>
-
-              {/* Secondary Calculator Button */}
-              <button
-                onClick={onScrollToCalculator}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm sm:text-base font-semibold text-white bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/25 transition-all cursor-pointer"
-              >
-                <Calculator className="w-4 h-4 text-[#E5B945]" />
-                <span>Calculate Savings</span>
-              </button>
-            </div>
-
-            {/* Trust Highlights Strip */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/15 w-full">
-              <div className="flex items-center gap-2 text-left">
-                <CheckCircle className="w-4 h-4 text-[#74A746] shrink-0" />
-                <span className="text-xs text-white/85 font-medium">99.9% Skin-Free Intact Cloves</span>
-              </div>
-              <div className="flex items-center gap-2 text-left">
-                <ShieldCheck className="w-4 h-4 text-[#E5B945] shrink-0" />
-                <span className="text-xs text-white/85 font-medium">100% Food-Grade Packaging</span>
-              </div>
-              <div className="col-span-2 sm:col-span-1 flex items-center gap-2 text-left justify-center sm:justify-start">
-                <Truck className="w-4 h-4 text-[#74A746] shrink-0" />
-                <span className="text-xs text-white/85 font-medium">Same-Day Dispatch in Ahmedabad</span>
-              </div>
+              <span className="text-[11px] text-gray-300 block mt-0.5">
+                Spotless skin-free cloves
+              </span>
             </div>
           </div>
 
-          {/* Right Column: Visual Brand Card */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0 flex justify-center">
-            <div className="relative w-full max-w-[420px] rounded-3xl p-3 sm:p-4 bg-gradient-to-b from-white/15 to-white/5 backdrop-blur-xl border border-white/20 shadow-2xl">
-              {/* Product Flyer Image */}
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-[#122411]">
-                <img
-                  src="/images/flyer-product.jpg"
-                  alt="OM Enterprise Peeled Garlic Bowl"
-                  className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                />
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-left flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-[#74A746]/25 text-[#74A746] flex items-center justify-center shrink-0 border border-[#74A746]/40">
+              <Leaf className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-bold text-xs sm:text-sm text-white block leading-tight">
+                0% Bleach
+              </span>
+              <span className="text-[11px] text-gray-300 block mt-0.5">
+                Pure natural aroma & oil
+              </span>
+            </div>
+          </div>
 
-                {/* Gradient vignette overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-left flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-[#C59B27]/25 text-[#E5B945] flex items-center justify-center shrink-0 border border-[#C59B27]/40">
+              <Truck className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-bold text-xs sm:text-sm text-white block leading-tight">
+                7:00 AM Delivery
+              </span>
+              <span className="text-[11px] text-gray-300 block mt-0.5">
+                Ahmedabad morning routes
+              </span>
+            </div>
+          </div>
 
-                {/* Floating Price / Batch Tag */}
-                <div className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-[#1B3216]/90 backdrop-blur-md border border-[#C59B27]/50 text-[11px] font-bold text-[#E5B945] flex items-center gap-1.5 shadow-md">
-                  <span className="w-2 h-2 rounded-full bg-[#74A746] animate-ping" />
-                  <span>Fresh Morning Batch</span>
-                </div>
-
-                {/* Bottom Overlay Info on Card */}
-                <div className="absolute bottom-3 inset-x-3 p-3.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 text-left">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="font-serif-heading font-extrabold text-[#FDF8E8] text-sm">
-                      OM Enterprise Fresh Garlic
-                    </span>
-                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-[#C59B27] text-white">
-                      Nikol Hub
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-white/80 line-clamp-2 leading-relaxed mb-2 m-0">
-                    Whole jumbo peeled cloves packed in 5kg, 10kg & 20kg food-grade vacuum sacks.
-                  </p>
-                  <div className="flex items-center justify-between text-[11px] pt-1.5 border-t border-white/10">
-                    <span className="text-[#E5B945] font-semibold">Bulk B2B Only (Min. 5 Kg)</span>
-                    <a
-                      href={`tel:${COMPANY_INFO.phones.primary.replace(/\s+/g, '')}`}
-                      className="inline-flex items-center gap-1 text-[#74A746] hover:text-white font-bold"
-                    >
-                      <PhoneCall className="w-3 h-3" />
-                      <span>{COMPANY_INFO.phones.primary}</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-left flex items-start gap-3">
+            <div className="w-9 h-9 rounded-xl bg-[#74A746]/25 text-[#74A746] flex items-center justify-center shrink-0 border border-[#74A746]/40">
+              <Package className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-bold text-xs sm:text-sm text-white block leading-tight">
+                Bulk Packs
+              </span>
+              <span className="text-[11px] text-gray-300 block mt-0.5">
+                5kg, 10kg, 20kg & 50kg
+              </span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Kevalon-style SVG Wave Transition to Section Below */}
-      <div className="relative z-10 w-full leading-none mt-8 -mb-12 sm:-mb-16 pointer-events-none">
+      <div className="relative z-10 w-full leading-none mt-10 -mb-12 sm:-mb-16 pointer-events-none">
         <svg
           viewBox="0 0 1440 80"
           preserveAspectRatio="none"

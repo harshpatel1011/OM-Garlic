@@ -165,17 +165,18 @@ Notes: ${formData.notes || 'None'}`;
 
           {/* Right Column: Interactive Order Form */}
           <div className="lg:col-span-7">
-            <div className="rounded-3xl p-6 sm:p-8 bg-white border-2 border-[#C59B27]/40 shadow-[0_12px_40px_rgba(45,74,34,0.10)] relative">
-              <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22]" />
+            <div className="rounded-3xl overflow-hidden bg-white border-2 border-[#C59B27]/40 shadow-[0_12px_40px_rgba(45,74,34,0.10)] relative">
+              <div className="h-2 w-full bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22]" />
 
-              <h3 className="font-serif-heading font-extrabold text-xl sm:text-2xl text-[#2D4A22] mb-1">
-                Request Instant Wholesale Quote
-              </h3>
-              <p className="text-xs text-gray-500 mb-6 font-normal">
-                Fill the details below to receive wholesale pricing or start doorstep delivery.
-              </p>
+              <div className="p-6 sm:p-8">
+                <h3 className="font-serif-heading font-extrabold text-xl sm:text-2xl text-[#2D4A22] mb-1">
+                  Request Instant Wholesale Quote
+                </h3>
+                <p className="text-xs text-gray-500 mb-6 font-normal">
+                  Fill the details below to receive wholesale pricing or start doorstep delivery.
+                </p>
 
-              <form onSubmit={handleSubmit} className="space-y-4 text-xs font-sans">
+                <form onSubmit={handleSubmit} className="space-y-4 text-xs font-sans">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name */}
                   <div>
@@ -289,6 +290,7 @@ Notes: ${formData.notes || 'None'}`;
                   </div>
                 )}
               </form>
+              </div>
             </div>
           </div>
         </div>

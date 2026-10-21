@@ -21,7 +21,7 @@ export interface ProductItem {
   minOrder: string;
   shelfLife: string;
   packaging: string;
-  image: string;
+  image?: string;
   bestFor: string[];
   specs: {
     purity: string;
@@ -40,17 +40,6 @@ export interface IndustryItem {
   benefits: string[];
   typicalVolume: string;
   packagingRecommendation: string;
-}
-
-export interface TestimonialItem {
-  id: string;
-  name: string;
-  role: string;
-  company: string;
-  location: string;
-  rating: number;
-  content: string;
-  avatarText: string;
 }
 
 export interface FaqItem {
