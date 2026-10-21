@@ -297,10 +297,20 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
           <div className="mt-4 p-3 rounded-xl bg-[#F2F7EF]/80 border border-[#2D4A22]/15 text-xs space-y-1.5">
             <div className="flex items-start gap-2">
               <MapPin className="w-3.5 h-3.5 text-[#2D4A22] shrink-0 mt-0.5" />
-              <p className="text-gray-700 leading-snug m-0">
-                <span className="font-bold text-[#2D4A22]">Plant:</span> 79 VR Industrial Park-2,
-                Kathwada Singarwa Road, Kathwada, Ahmedabad - 382430
-              </p>
+              <div>
+                <p className="text-gray-700 leading-snug m-0">
+                  <span className="font-bold text-[#2D4A22]">Plant:</span> 79 VR Industrial Park-2,
+                  Kathwada Singarwa Road, Kathwada, Ahmedabad - 382430
+                </p>
+                <a
+                  href={COMPANY_INFO.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] font-bold text-[#C59B27] hover:underline mt-1"
+                >
+                  <span>Open in Google Maps ↗</span>
+                </a>
+              </div>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Clock className="w-3.5 h-3.5 text-[#C59B27] shrink-0" />

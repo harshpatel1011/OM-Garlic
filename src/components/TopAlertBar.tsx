@@ -31,10 +31,15 @@ export const TopAlertBar: React.FC<TopAlertBarProps> = ({ isVisible }) => {
           <Calendar className="w-3 h-3 text-[#C59B27]" />
           <span>Opening: 20-10-2026 (Kathwada)</span>
         </div>
-        <div className="hidden lg:flex items-center gap-1 text-white/80">
+        <a
+          href={COMPANY_INFO.mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:flex items-center gap-1 text-white/80 hover:text-[#E5B945] transition-colors"
+        >
           <MapPin className="w-3 h-3 text-[#C59B27]" />
           <span>Kathwada, Ahmedabad</span>
-        </div>
+        </a>
         <a
           href={`tel:${COMPANY_INFO.phones.primary.replace(/\s+/g, '')}`}
           className="flex items-center gap-1 text-[#E5B945] font-bold hover:text-white transition-colors"

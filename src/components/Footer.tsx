@@ -162,12 +162,17 @@ export const Footer: React.FC = () => {
               </div>
 
               <div className="pt-2 border-t border-white/10">
-                <div className="flex items-start gap-2">
+                <a
+                  href={COMPANY_INFO.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 hover:text-[#E5B945] transition-colors group"
+                >
                   <MapPin className="w-3.5 h-3.5 text-[#E5B945] shrink-0 mt-0.5" />
                   <span className="leading-relaxed">
                     79 VR Industrial Park-2, Kathwada Singarwa Road, Kathwada, Ahmedabad - 382430
                   </span>
-                </div>
+                </a>
               </div>
             </div>
           </div>

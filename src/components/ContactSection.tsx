@@ -141,18 +141,17 @@ Notes: ${formData.notes || 'None'}`;
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#E5B945] shrink-0 mt-1" />
                 <div className="text-xs">
-                  <span className="font-bold text-[#E5B945] block">Processing Plant:</span>
-                  <p className="text-white/85 m-0 leading-relaxed">
-                    {COMPANY_INFO.address.plant}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 pt-2 border-t border-white/10">
-                <MapPin className="w-4 h-4 text-[#74A746] shrink-0 mt-1" />
-                <div className="text-xs">
-                  <span className="font-bold text-[#74A746] block">Facility & Dispatch:</span>
-                  <p className="text-white/85 m-0">{COMPANY_INFO.address.plant}</p>
+                  <span className="font-bold text-[#E5B945] block">Facility & Dispatch Plant:</span>
+                  <a
+                    href={COMPANY_INFO.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-2 hover:text-[#E5B945] transition-colors group"
+                    >
+                      <span className="leading-relaxed">
+                        {COMPANY_INFO.address.plant}
+                      </span>
+                  </a>
                 </div>
               </div>
 

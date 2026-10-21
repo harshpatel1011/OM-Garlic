@@ -22,9 +22,7 @@ export const GrandOpeningSection: React.FC<GrandOpeningSectionProps> = ({ onOpen
     { name: 'Sagar Patel', phone: COMPANY_INFO.phones.sagar },
   ];
 
-  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    '79 VR Industrial park-2, kathwada singarwa road, kathwada ahmedabad'
-  )}`;
+  const mapUrl = COMPANY_INFO.mapUrl;
 
   return (
     <section id="grand-opening" className="py-14 sm:py-20 bg-white relative overflow-hidden font-sans">
