@@ -51,10 +51,10 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
         }`}
       >
         <div
-          className={`w-full max-w-[1360px] relative flex items-center justify-between transition-all duration-300 ${
+          className={`w-full max-w-[1360px] relative flex items-center justify-between transition-all duration-300 rounded-full ${
             isScrolled
-              ? 'rounded-full px-4 sm:px-6 py-2 bg-white/95 backdrop-blur-xl border border-white/80 shadow-[0_10px_35px_rgba(45,74,34,0.14),0_2px_8px_rgba(0,0,0,0.06)]'
-              : 'rounded-2xl sm:rounded-full px-4 sm:px-7 py-2.5 sm:py-3 bg-white/90 backdrop-blur-lg border border-white/60 shadow-[0_6px_25px_rgba(45,74,34,0.08)]'
+              ? 'px-4 sm:px-6 py-2 bg-white/95 backdrop-blur-xl border border-white/80 shadow-[0_10px_35px_rgba(45,74,34,0.14),0_2px_8px_rgba(0,0,0,0.06)]'
+              : 'px-4 sm:px-7 py-2.5 sm:py-3 bg-white/90 backdrop-blur-lg border border-white/60 shadow-[0_6px_25px_rgba(45,74,34,0.08)]'
           }`}
         >
           {/* Brand Logo */}
@@ -128,7 +128,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
               aria-expanded={mobileMenuOpen}
-              className="flex lg:hidden flex-col justify-center items-center gap-[5px] w-10 h-10 p-2 rounded-xl bg-[#F2F7EF] border border-[#2D4A22]/15 cursor-pointer text-[#2D4A22] hover:bg-[#E5EFE1] active:scale-95 transition-all shadow-xs"
+              className="flex lg:hidden flex-col justify-center items-center gap-[5px] w-10 h-10 p-2 rounded-full bg-[#F2F7EF] border border-[#2D4A22]/15 cursor-pointer text-[#2D4A22] hover:bg-[#E5EFE1] active:scale-95 transition-all shadow-xs"
             >
               <span
                 className={`block w-5 h-[2.5px] rounded-full bg-[#2D4A22] transition-all duration-300 origin-center ${

@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   X,
   MessageCircle,
   Phone,
   CheckCircle2,
-  Sparkles,
   Package,
 } from 'lucide-react';
-import { COMPANY_INFO, PRODUCTS_ITEMS } from '../data/garlicData';
+import { COMPANY_INFO } from '../data/garlicData';
 
 interface OrderModalProps {
   isOpen: boolean;
@@ -22,20 +21,24 @@ export const OrderModal: React.FC<OrderModalProps> = ({
   defaultProduct,
   defaultVolume,
 }) => {
-  const [product, setProduct] = useState(defaultProduct || PRODUCTS_ITEMS[0].title);
   const [volume, setVolume] = useState(defaultVolume || '5 Kg');
   const [customerType, setCustomerType] = useState('Restaurant');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [area, setArea] = useState('');
 
+  useEffect(() => {
+    if (defaultVolume) {
+      setVolume(defaultVolume);
+    }
+  }, [defaultVolume, isOpen]);
+
   if (!isOpen) return null;
 
   const handleWhatsAppSend = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const msg = `*New Order Booking - OM Enterprise Garlic*
-Item: ${product}
+    const msg = `*New Order Booking - OM Enterprise Peeled Garlic*
 Quantity: ${volume}
 Customer Type: ${customerType}
 Name: ${name || 'Customer'}
@@ -81,23 +84,7 @@ Delivery Area: ${area || 'Ahmedabad'}`;
 
         {/* Form Body */}
         <form onSubmit={handleWhatsAppSend} className="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs">
-          {/* Garlic Variety */}
-          <div>
-            <label className="font-bold text-gray-700 block mb-1">Select Variety</label>
-            <select
-              value={product}
-              onChange={(e) => setProduct(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
-            >
-              {PRODUCTS_ITEMS.map((p) => (
-                <option key={p.id} value={p.title}>
-                  {p.title} ({p.tag})
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Volume & Type */}
+          {/* Quantity & Business Sector */}
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="font-bold text-gray-700 block mb-1">Quantity</label>
@@ -106,12 +93,19 @@ Delivery Area: ${area || 'Ahmedabad'}`;
                 onChange={(e) => setVolume(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
               >
-                <option value="5 Kg Bulk Sack">5 Kg Bulk Sack</option>
-                <option value="10 Kg Bulk Pack">10 Kg Bulk Pack (2x 5Kg)</option>
-                <option value="20 Kg Bulk Master Bag">20 Kg Bulk Master Bag</option>
-                <option value="50 Kg Wholesale Sack">50 Kg Wholesale Sack</option>
-                <option value="100+ Kg Daily Commercial Contract">100+ Kg Daily Commercial Contract</option>
-                <option value="Chef Tasting Sample Batch (5 Kg)">Chef Tasting Sample Batch (5 Kg)</option>
+                {!['5 Kg', '10 Kg', '15 Kg', '20 Kg', '25 Kg', '30 Kg', '50 Kg', '100 Kg', '100+ Kg', '500+ Kg'].includes(volume) && (
+                  <option value={volume}>{volume}</option>
+                )}
+                <option value="5 Kg">5 Kg</option>
+                <option value="10 Kg">10 Kg</option>
+                <option value="15 Kg">15 Kg</option>
+                <option value="20 Kg">20 Kg</option>
+                <option value="25 Kg">25 Kg</option>
+                <option value="30 Kg">30 Kg</option>
+                <option value="50 Kg">50 Kg</option>
+                <option value="100 Kg">100 Kg</option>
+                <option value="100+ Kg">100+ Kg</option>
+                <option value="500+ Kg">500+ Kg</option>
               </select>
             </div>
 

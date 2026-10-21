@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageCircle, Package, ShoppingCart } from 'lucide-react';
+import { Phone, MessageCircle, ShoppingCart } from 'lucide-react';
 import { COMPANY_INFO } from '../data/garlicData';
 
 interface MobileBottomNavProps {
@@ -7,13 +7,8 @@ interface MobileBottomNavProps {
 }
 
 export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenOrderModal }) => {
-  const handleScrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <div className="sm:hidden fixed bottom-0 inset-x-0 z-[950] bg-white/95 backdrop-blur-lg border-t border-[#2D4A22]/15 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-3 py-2 flex items-center justify-around font-sans">
+    <div className="sm:hidden fixed bottom-0 inset-x-0 z-[950] bg-white/95 backdrop-blur-lg border-t border-[#2D4A22]/15 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-4 py-2 flex items-center justify-around font-sans">
       {/* Call Direct */}
       <a
         href={`tel:${COMPANY_INFO.phones.primary.replace(/\s+/g, '')}`}
@@ -40,21 +35,10 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenOrderMod
         <span>WhatsApp</span>
       </a>
 
-      {/* View Products */}
-      <button
-        onClick={() => handleScrollTo('products')}
-        className="flex flex-col items-center gap-1 text-[10px] font-bold text-gray-700 hover:text-[#2D4A22] active:scale-90 transition-transform cursor-pointer"
-      >
-        <div className="w-8 h-8 rounded-full bg-[#F2F7EF] border border-[#2D4A22]/20 text-[#2D4A22] flex items-center justify-center">
-          <Package className="w-4 h-4" />
-        </div>
-        <span>Products</span>
-      </button>
-
       {/* Instant Order Button */}
       <button
         onClick={onOpenOrderModal}
-        className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22] text-white text-xs font-bold shadow-md active:scale-95 transition-transform cursor-pointer shimmer-effect relative overflow-hidden"
+        className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22] text-white text-xs font-bold shadow-md active:scale-95 transition-transform cursor-pointer shimmer-effect relative overflow-hidden"
       >
         <ShoppingCart className="w-3.5 h-3.5" />
         <span>Quick Order</span>

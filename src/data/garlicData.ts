@@ -159,7 +159,7 @@ export const INDUSTRIES_ITEMS: IndustryItem[] = [
       'Priority early-morning doorstep delivery before 7:30 AM',
     ],
     typicalVolume: '20kg - 150kg / day',
-    packagingRecommendation: '5kg & 10kg Vacuum Master Bags',
+    packagingRecommendation: '5kg & 10kg Vacuum Bags',
   },
   {
     id: 'restaurants',
@@ -174,7 +174,7 @@ export const INDUSTRIES_ITEMS: IndustryItem[] = [
       'Reliable scheduled daily morning dispatch',
     ],
     typicalVolume: '10kg - 60kg / day',
-    packagingRecommendation: '5kg & 10kg Food-grade Pouches',
+    packagingRecommendation: '5kg & 10kg Pouches',
   },
   {
     id: 'caterers',
@@ -189,7 +189,7 @@ export const INDUSTRIES_ITEMS: IndustryItem[] = [
       'Direct dispatch to event venue or central base kitchen',
     ],
     typicalVolume: '25kg - 300kg / event',
-    packagingRecommendation: '10kg & 20kg Heavy Vacuum Bags',
+    packagingRecommendation: '10kg & 20kg Vacuum Bags',
   },
   {
     id: 'food-industries',
@@ -204,7 +204,7 @@ export const INDUSTRIES_ITEMS: IndustryItem[] = [
       'Bulk batch certificates and wholesale GST contracts',
     ],
     typicalVolume: '100kg - 1,000kg+ / day',
-    packagingRecommendation: '20kg & 50kg Heavy-duty Sacks',
+    packagingRecommendation: '20kg & 50kg Sacks',
   },
 ];
 

@@ -119,10 +119,10 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onOpenOrde
 
                 <button
                   onClick={() => onOpenOrderModal(item.title)}
-                  className="w-full py-3 rounded-full text-xs font-bold text-white bg-gradient-to-r from-[#C59B27] to-[#2D4A22] shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3 px-4 rounded-full text-xs font-bold text-white bg-gradient-to-r from-[#C59B27] to-[#2D4A22] shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer transition-all active:scale-[0.98]"
                 >
-                  <span>Book Bulk Order For {item.title}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Get Wholesale Quote</span>
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </button>
               </div>
             );
@@ -176,11 +176,11 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onOpenOrde
                       <span className="font-bold text-[#2D4A22]">{item.typicalVolume}</span>
                     </div>
                     <div className="flex items-center justify-between text-gray-500">
-                      <span className="flex items-center gap-1">
+                      <span className="flex items-center gap-1 shrink-0">
                         <Package className="w-3 h-3 text-[#74A746]" />
                         <span>Packs:</span>
                       </span>
-                      <span className="font-bold text-[#C59B27] truncate max-w-[130px]">
+                      <span className="font-bold text-[#C59B27] text-right truncate pl-2">
                         {item.packagingRecommendation}
                       </span>
                     </div>
@@ -189,10 +189,10 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onOpenOrde
                   {/* Card Button */}
                   <button
                     onClick={() => onOpenOrderModal(item.title)}
-                    className="w-full py-2.5 rounded-full text-xs font-bold text-[#2D4A22] bg-[#F2F7EF] hover:bg-[#2D4A22] hover:text-white border border-[#2D4A22]/20 transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full py-2.5 px-3 rounded-full text-xs font-bold text-[#2D4A22] bg-[#F2F7EF] hover:bg-gradient-to-r hover:from-[#C59B27] hover:to-[#2D4A22] hover:text-white border border-[#2D4A22]/20 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group/btn active:scale-[0.98]"
                   >
-                    <span>Inquire for {item.title}</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <span>Get Wholesale Quote</span>
+                    <ArrowRight className="w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
                   </button>
                 </div>
               </div>
