@@ -152,6 +152,11 @@ export const Footer: React.FC = () => {
                 <span>{COMPANY_INFO.phones.primary} / {COMPANY_INFO.phones.secondary}</span>
               </a>
 
+              <div className="flex items-center gap-2 text-gray-300">
+                <Clock className="w-3.5 h-3.5 text-[#E5B945] shrink-0" />
+                <span>Hours: 9:00 AM - 5:00 PM</span>
+              </div>
+
               <div className="pt-2 border-t border-white/10 space-y-1">
                 <span className="text-[10px] uppercase tracking-wider text-gray-400 block">
                   Patel Family Contacts:

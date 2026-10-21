@@ -157,7 +157,7 @@ Notes: ${formData.notes || 'None'}`;
 
               <div className="flex items-center gap-3 pt-2 border-t border-white/10 text-xs text-white/80">
                 <Clock className="w-4 h-4 text-[#E5B945] shrink-0" />
-                <span>Morning Dispatch: 7:00 AM - 11:00 AM Daily</span>
+                <span>Working / Order Hours: 9:00 AM - 5:00 PM</span>
               </div>
             </div>
           </div>

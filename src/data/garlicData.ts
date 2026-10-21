@@ -19,10 +19,11 @@ export const COMPANY_INFO = {
     plant: '79 VR Industrial Park-2, Kathwada Singarwa Road, Kathwada, Ahmedabad, Gujarat - 382430',
     hub: 'Kathwada, Ahmedabad, Gujarat',
   },
+  operatingHours: '9:00 AM to 5:00 PM',
   openingEvent: {
     date: '20-10-2026',
     day: 'Tuesday',
-    time: '10:00 AM Onwards',
+    time: '9:00 AM to 5:00 PM',
     venue: '79 VR Industrial park-2, kathwada singarwa road, kathwada ahmedabad, gujrat-382430',
   },
 };
