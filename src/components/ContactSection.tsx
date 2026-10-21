@@ -213,11 +213,12 @@ Notes: ${formData.notes || 'None'}`;
                       onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
                     >
-                      <option value="Restaurant / Cafe">Restaurant / Cafe</option>
-                      <option value="Hotel / Banquet">Hotel / Banquet</option>
-                      <option value="Food Processing / Cloud Kitchen">Food Processing / Cloud Kitchen</option>
-                      <option value="Home Delivery">Home Delivery</option>
-                      <option value="Catering Service">Catering Service</option>
+                      <option value="Hotel & Resort Banquets">Hotel & Resort Banquets</option>
+                      <option value="Restaurant & Cafe Chains">Restaurant & Cafe Chains</option>
+                      <option value="Catering & Event Organizers">Catering & Event Organizers</option>
+                      <option value="Central Cloud Kitchens">Central Cloud Kitchens</option>
+                      <option value="Food Processing & Paste Units">Food Processing & Paste Units</option>
+                      <option value="Namkeen & Pickle Factory">Namkeen & Pickle Factory</option>
                     </select>
                   </div>
 
@@ -229,11 +230,11 @@ Notes: ${formData.notes || 'None'}`;
                       onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
                     >
-                      <option value="1 - 2 Kg (Trial / Home)">1 - 2 Kg (Trial / Home)</option>
                       <option value="5 - 10 Kg/day">5 - 10 Kg/day (Cafe / Small Restro)</option>
                       <option value="15 - 30 Kg/day">15 - 30 Kg/day (Large Restaurant)</option>
                       <option value="50 - 100 Kg/day">50 - 100 Kg/day (Hotel / Banquet)</option>
-                      <option value="100+ Kg Bulk">100+ Kg/day (Industrial / Wholesale)</option>
+                      <option value="100+ Kg Bulk Contract">100+ Kg/day (Industrial / Wholesale)</option>
+                      <option value="5 Kg Trial Sample Batch">5 Kg Commercial Trial Sample</option>
                     </select>
                   </div>
                 </div>

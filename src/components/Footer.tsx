@@ -45,8 +45,8 @@ export const Footer: React.FC = () => {
 
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-normal">
               Ahmedabad’s trusted direct processor of 100% natural, machine-peeled garlic cloves.
-              Delivering hygienic, chemical-free garlic daily to homes, hotels, restaurants, and
-              food processing industries.
+              Delivering hygienic, chemical-free garlic in wholesale bulk daily to hotels, restaurants,
+              caterers, and food processing industries.
             </p>
 
             <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-xs space-y-1">
@@ -132,7 +132,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#74A746]" />
-                <span>Homes & Domestic Kitchens</span>
+                <span>Wedding Caterers & Institutional Kitchens</span>
               </li>
             </ul>
           </div>

@@ -67,10 +67,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onScrollToCalculat
             <p className="text-sm sm:text-base lg:text-lg text-[#E3ECD9] leading-relaxed max-w-xl mb-7 sm:mb-9 font-normal">
               Direct factory supply of crisp, spotless, and hygienic peeled garlic cloves. Zero
               chemicals, zero food waste, and ready-to-cook daily morning delivery for{' '}
-              <span className="text-[#F4CE6A] font-semibold">Homes</span>,{' '}
-              <span className="text-[#F4CE6A] font-semibold">Hotels</span>,{' '}
-              <span className="text-[#F4CE6A] font-semibold">Restaurants</span>, and{' '}
-              <span className="text-[#F4CE6A] font-semibold">Food Industries</span> in Ahmedabad.
+              <span className="text-[#F4CE6A] font-semibold">Hotels & Banquets</span>,{' '}
+              <span className="text-[#F4CE6A] font-semibold">Restaurants</span>,{' '}
+              <span className="text-[#F4CE6A] font-semibold">Catering Operations</span>, and{' '}
+              <span className="text-[#F4CE6A] font-semibold">Food Processing Plants</span> across Ahmedabad & Gujarat.
             </p>
 
             {/* CTA Buttons */}
@@ -142,10 +142,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onScrollToCalculat
                     </span>
                   </div>
                   <p className="text-[11px] text-white/80 line-clamp-2 leading-relaxed mb-2 m-0">
-                    Whole jumbo peeled cloves packed in 1kg, 5kg & 20kg food-grade vacuum pouches.
+                    Whole jumbo peeled cloves packed in 5kg, 10kg & 20kg food-grade vacuum sacks.
                   </p>
                   <div className="flex items-center justify-between text-[11px] pt-1.5 border-t border-white/10">
-                    <span className="text-[#E5B945] font-semibold">Min. Order: 1 Kg</span>
+                    <span className="text-[#E5B945] font-semibold">Bulk B2B Only (Min. 5 Kg)</span>
                     <a
                       href={`tel:${COMPANY_INFO.phones.primary.replace(/\s+/g, '')}`}
                       className="inline-flex items-center gap-1 text-[#74A746] hover:text-white font-bold"

@@ -92,19 +92,19 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ onOpenOrde
                 <input
                   id="garlic-slider"
                   type="range"
-                  min="1"
-                  max="50"
-                  step="1"
+                  min="5"
+                  max="100"
+                  step="5"
                   value={dailyKg}
                   onChange={(e) => setDailyKg(Number(e.target.value))}
                   className="w-full h-2.5 bg-[#FAF8F2] rounded-lg appearance-none cursor-pointer accent-[#2D4A22] border border-gray-200"
                 />
 
                 <div className="flex justify-between text-[11px] font-semibold text-gray-400 mt-2">
-                  <span>1 Kg (Home / Cafe)</span>
-                  <span>15 Kg (Restaurant)</span>
-                  <span>30 Kg (Hotel)</span>
-                  <span>50+ Kg (Catering)</span>
+                  <span>5 Kg (Cafe / Dhaba)</span>
+                  <span>25 Kg (Restaurant)</span>
+                  <span>50 Kg (Hotel / Banquet)</span>
+                  <span>100+ Kg (Catering / Factory)</span>
                 </div>
               </div>
 

@@ -106,28 +106,28 @@ Delivery Area: ${area || 'Ahmedabad'}`;
                 onChange={(e) => setVolume(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
               >
-                <option value="1 Kg (Sample / Trial)">1 Kg (Sample / Trial)</option>
-                <option value="5 Kg">5 Kg Pouch</option>
-                <option value="10 Kg">10 Kg (2x 5Kg)</option>
-                <option value="20 Kg Bulk">20 Kg Bulk Master Bag</option>
-                <option value="50 Kg Wholesale">50 Kg Wholesale</option>
-                <option value="100+ Kg Daily Contract">100+ Kg Daily Contract</option>
+                <option value="5 Kg Bulk Sack">5 Kg Bulk Sack</option>
+                <option value="10 Kg Bulk Pack">10 Kg Bulk Pack (2x 5Kg)</option>
+                <option value="20 Kg Bulk Master Bag">20 Kg Bulk Master Bag</option>
+                <option value="50 Kg Wholesale Sack">50 Kg Wholesale Sack</option>
+                <option value="100+ Kg Daily Commercial Contract">100+ Kg Daily Commercial Contract</option>
+                <option value="Chef Tasting Sample Batch (5 Kg)">Chef Tasting Sample Batch (5 Kg)</option>
               </select>
             </div>
 
             <div>
-              <label className="font-bold text-gray-700 block mb-1">You Are</label>
+              <label className="font-bold text-gray-700 block mb-1">Business Sector</label>
               <select
                 value={customerType}
                 onChange={(e) => setCustomerType(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
               >
-                <option value="Restaurant">Restaurant / Dhaba</option>
-                <option value="Hotel">Hotel / Banquet</option>
-                <option value="Caterer">Catering Service</option>
-                <option value="Cloud Kitchen">Cloud Kitchen</option>
-                <option value="Home Kitchen">Home Kitchen</option>
-                <option value="Food Processing">Food Processing Factory</option>
+                <option value="Hotel / Banquet">Hotel / Resort / Banquet</option>
+                <option value="Restaurant / Cafe">Restaurant / Cafe / Dhaba</option>
+                <option value="Catering Service">Catering & Event Service</option>
+                <option value="Cloud Kitchen">Central Cloud Kitchen Cluster</option>
+                <option value="Food Processing Factory">Food Processing / Paste Factory</option>
+                <option value="Wholesale Distributor">Wholesale Food Distributor</option>
               </select>
             </div>
           </div>
