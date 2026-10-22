@@ -19,8 +19,8 @@ interface GrandOpeningSectionProps {
 export const GrandOpeningSection: React.FC<GrandOpeningSectionProps> = ({ onOpenOrderModal }) => {
   const hosts = [
     { name: 'Adhrav Patel', phone: COMPANY_INFO.phones.adhrav },
-    { name: 'Yash Patel', phone: COMPANY_INFO.phones.yash },
     { name: 'Sagar Patel', phone: COMPANY_INFO.phones.sagar },
+    { name: 'Yash Patel', phone: COMPANY_INFO.phones.yash },
   ];
 
   const mapUrl = COMPANY_INFO.mapUrl;

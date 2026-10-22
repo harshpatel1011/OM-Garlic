@@ -290,18 +290,18 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
                   <span className="text-[#C59B27] font-bold">{COMPANY_INFO.phones.adhrav}</span>
                 </a>
                 <a
-                  href={`tel:${COMPANY_INFO.phones.yash.replace(/\s+/g, '')}`}
-                  className="flex items-center justify-between px-2 py-1 text-xs text-gray-800 hover:text-[#2D4A22]"
-                >
-                  <span className="font-semibold">Yash Patel</span>
-                  <span className="text-[#C59B27] font-bold">{COMPANY_INFO.phones.yash}</span>
-                </a>
-                <a
                   href={`tel:${COMPANY_INFO.phones.sagar.replace(/\s+/g, '')}`}
                   className="flex items-center justify-between px-2 py-1 text-xs text-gray-800 hover:text-[#2D4A22]"
                 >
                   <span className="font-semibold">Sagar Patel</span>
                   <span className="text-[#C59B27] font-bold">{COMPANY_INFO.phones.sagar}</span>
+                </a>
+                <a
+                  href={`tel:${COMPANY_INFO.phones.yash.replace(/\s+/g, '')}`}
+                  className="flex items-center justify-between px-2 py-1 text-xs text-gray-800 hover:text-[#2D4A22]"
+                >
+                  <span className="font-semibold">Yash Patel</span>
+                  <span className="text-[#C59B27] font-bold">{COMPANY_INFO.phones.yash}</span>
                 </a>
               </div>
             )}

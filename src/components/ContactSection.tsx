@@ -145,15 +145,15 @@ Notes: ${formData.notes || 'None'}`;
                   </a>
                 </div>
                 <div className="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50">
-                  <span className="font-semibold text-gray-800">Yash Patel:</span>
-                  <a href={`tel:${COMPANY_INFO.phones.yash}`} className="font-bold text-[#2D4A22]">
-                    {COMPANY_INFO.phones.yash}
-                  </a>
-                </div>
-                <div className="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50">
                   <span className="font-semibold text-gray-800">Sagar Patel:</span>
                   <a href={`tel:${COMPANY_INFO.phones.sagar}`} className="font-bold text-[#2D4A22]">
                     {COMPANY_INFO.phones.sagar}
+                  </a>
+                </div>
+                <div className="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50">
+                  <span className="font-semibold text-gray-800">Yash Patel:</span>
+                  <a href={`tel:${COMPANY_INFO.phones.yash}`} className="font-bold text-[#2D4A22]">
+                    {COMPANY_INFO.phones.yash}
                   </a>
                 </div>
               </div>

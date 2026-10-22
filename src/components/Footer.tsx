@@ -49,8 +49,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
 
   const partnerContacts = [
     { name: 'Adhrav Patel', phone: COMPANY_INFO.phones.adhrav },
-    { name: 'Yash Patel', phone: COMPANY_INFO.phones.yash },
     { name: 'Sagar Patel', phone: COMPANY_INFO.phones.sagar },
+    { name: 'Yash Patel', phone: COMPANY_INFO.phones.yash },
   ];
 
   return (
