@@ -4,7 +4,7 @@ import {
   Clock,
   TrendingDown,
   Trash2,
-  DollarSign,
+  IndianRupee,
   ArrowRight,
   Sparkles,
 } from 'lucide-react';
@@ -143,9 +143,9 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ onOpenOrde
 
                 {/* Total savings */}
                 <div className="col-span-2 sm:col-span-1 p-4 rounded-2xl bg-gradient-to-br from-[#FAF8F2] to-[#E5EFE1] border border-[#C59B27]/40 text-center">
-                  <DollarSign className="w-5 h-5 text-[#2D4A22] mx-auto mb-1.5" />
+                  <IndianRupee className="w-5 h-5 text-[#2D4A22] mx-auto mb-1.5" />
                   <span className="font-serif-heading font-extrabold text-2xl text-[#2D4A22] block leading-none">
-                    ₹{totalMonthlySavings.toLocaleString('en-IN')}
+                    {totalMonthlySavings.toLocaleString('en-IN')}
                   </span>
                   <span className="text-[11px] font-extrabold text-[#C59B27] block mt-1 uppercase">
                     Est. Monthly Savings

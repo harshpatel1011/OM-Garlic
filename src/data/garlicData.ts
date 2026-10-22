@@ -140,7 +140,7 @@ export const WHY_CHOOSE_ITEMS: FeatureItem[] = [
       'Price stability contracts for institutional buyers',
     ],
     stats: [
-      { icon: 'DollarSign', value: 'Direct', label: 'Factory rates' },
+      { icon: 'IndianRupee', value: 'Direct', label: 'Factory rates' },
       { icon: 'TrendingUp', value: '15-22%', label: 'Food cost saving' },
       { icon: 'FileText', value: '100%', label: 'GST Invoices' },
     ],
