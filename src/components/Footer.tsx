@@ -193,7 +193,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
               <span className="px-3 py-1 rounded-full bg-[#1A3316] text-[#E5B945] border border-[#C59B27]/30 font-semibold">
                 Kathwada Facility
               </span>
-              <a href={COMPANY_INFO.instagram} target="_blank" rel="noopener noreferrer" className="px-3 py-1 rounded-full bg-gradient-to-r from-[#F58529]/20 to-[#DD2A7B]/20 hover:from-[#F58529]/35 hover:to-[#DD2A7B]/35 text-white border border-[#DD2A7B]/40 font-semibold inline-flex items-center gap-1.5 transition-all"><Instagram className="w-3.5 h-3.5 text-[#E5B945]" /><span>@{COMPANY_INFO.instagramHandle}</span></a>
+              <a href={COMPANY_INFO.instagram} target="_blank" rel="noopener noreferrer" className="px-3 py-1 rounded-full bg-[#1A3316] hover:bg-[#25461E] text-[#E5B945] border border-[#C59B27]/40 font-semibold inline-flex items-center gap-1.5 transition-all"><Instagram className="w-3.5 h-3.5 text-[#E5B945]" /><span>@{COMPANY_INFO.instagramHandle}</span></a>
               <span className="px-3 py-1 rounded-full bg-[#1A3316] text-white/90 border border-white/10 font-medium">
                 B2B Bulk Commercial Only
               </span>
@@ -252,7 +252,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
             {/* Main Phone Link */}
             <a
               href={`tel:${COMPANY_INFO.phones.primary.replace(/\s+/g, '')}`}
-              className="flex items-center justify-between p-3 rounded-2xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 transition-colors group"
+              className="flex items-center justify-between p-3 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-[#C59B27]/30 transition-colors group"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-[#C59B27]/25 text-[#E5B945] flex items-center justify-center shrink-0">
@@ -271,14 +271,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
               href={COMPANY_INFO.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3 rounded-2xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 transition-colors group"
+              className="flex items-center justify-between p-3 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-[#C59B27]/30 transition-colors group"
             >
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#C59B27] to-[#2D4A22] text-[#FDF8E8] flex items-center justify-center shrink-0 shadow-xs border border-[#C59B27]/40">
                   <Instagram className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-gray-400 block">Instagram</span>
+                  <span className="text-[10px] uppercase font-bold text-[#E5B945] block">Instagram</span>
                   <span className="font-bold text-white text-xs">@{COMPANY_INFO.instagramHandle}</span>
                 </div>
               </div>

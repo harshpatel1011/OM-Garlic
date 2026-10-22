@@ -113,9 +113,9 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow OM Enterprise on Instagram"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold text-[#E1306C] bg-pink-50/70 border border-[#E1306C]/25 hover:bg-pink-100/70 transition-all"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold text-[#2D4A22] bg-[#FAF8F2] border border-[#C59B27]/30 hover:bg-[#F3ECCE] hover:border-[#C59B27] transition-all"
             >
-              <Instagram className="w-3.5 h-3.5 text-[#E1306C]" />
+              <Instagram className="w-3.5 h-3.5 text-[#C59B27]" />
               <span className="hidden xl:inline">@{COMPANY_INFO.instagramHandle}</span>
             </a>
 
@@ -362,9 +362,9 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
             href={COMPANY_INFO.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2.5 rounded-full text-xs font-bold text-[#E1306C] border border-[#E1306C]/30 bg-gradient-to-r from-[#FAF8F2] to-[#FFF5F5] hover:to-[#FFEBEB] flex items-center justify-center gap-2 transition-colors"
+            className="w-full py-2.5 rounded-full text-xs font-bold text-[#2D4A22] border border-[#C59B27]/30 bg-[#FAF8F2] hover:bg-[#F3ECCE] flex items-center justify-center gap-2 transition-colors"
           >
-            <Instagram className="w-4 h-4 text-[#E1306C]" />
+            <Instagram className="w-4 h-4 text-[#C59B27]" />
             <span>Follow @{COMPANY_INFO.instagramHandle}</span>
           </a>
         </div>

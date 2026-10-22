@@ -109,18 +109,18 @@ Notes: ${formData.notes || 'None'}`;
                   href={COMPANY_INFO.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3 rounded-2xl bg-gradient-to-r from-[#FAF8F2] to-[#FFF5F5] hover:to-[#FFEBEB] border border-[#E1306C]/20 transition-colors group"
+                  className="flex items-center justify-between p-3 rounded-2xl bg-[#FAF8F2] hover:bg-[#F3ECCE] border border-[#C59B27]/25 transition-colors group"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] text-white flex items-center justify-center shrink-0 shadow-xs">
+                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#C59B27] via-[#D4A346] to-[#2D4A22] text-white flex items-center justify-center shrink-0 shadow-xs">
                       <Instagram className="w-4 h-4 text-white" />
                     </div>
                     <div>
                       <span className="font-bold text-xs text-gray-900 block">Official Instagram</span>
-                      <span className="text-xs text-[#E1306C] font-semibold">@{COMPANY_INFO.instagramHandle}</span>
+                      <span className="text-xs text-[#2D4A22] font-semibold">@{COMPANY_INFO.instagramHandle}</span>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-[#E1306C] group-hover:underline flex items-center gap-1">
+                  <span className="text-xs font-bold text-[#C59B27] group-hover:underline flex items-center gap-1">
                     <span>Follow</span>
                     <ExternalLink className="w-3 h-3" />
                   </span>
