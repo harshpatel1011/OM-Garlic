@@ -16,8 +16,8 @@ export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    industry: 'Restaurant / Cafe',
-    volume: '5 - 10 Kg/day',
+    industry: '',
+    volume: '',
     location: '',
     notes: '',
   });
@@ -213,6 +213,7 @@ Notes: ${formData.notes || 'None'}`;
                       onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
                     >
+                      <option value="" disabled>Select Industry / Sector</option>
                       <option value="Hotel & Resort Banquets">Hotel & Resort Banquets</option>
                       <option value="Restaurant & Cafe Chains">Restaurant & Cafe Chains</option>
                       <option value="Catering & Event Organizers">Catering & Event Organizers</option>
@@ -230,6 +231,7 @@ Notes: ${formData.notes || 'None'}`;
                       onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
                     >
+                      <option value="" disabled>Select Daily Requirement</option>
                       <option value="1 - 2 Kg/day">1 - 2 Kg/day</option>
                       <option value="5 - 10 Kg/day">5 - 10 Kg/day</option>
                       <option value="15 - 30 Kg/day">15 - 30 Kg/day</option>

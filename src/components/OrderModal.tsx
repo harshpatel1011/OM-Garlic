@@ -17,7 +17,7 @@ interface OrderModalProps {
 }
 
 const mapSector = (sec?: string): string => {
-  if (!sec) return 'Hotel / Banquet';
+  if (!sec) return '';
   const s = sec.toLowerCase();
   if (s.includes('hotel') || s.includes('banquet') || s.includes('resort')) return 'Hotel / Banquet';
   if (s.includes('restaurant') || s.includes('dhaba') || s.includes('cafe')) return 'Restaurant / Cafe';
@@ -25,7 +25,7 @@ const mapSector = (sec?: string): string => {
   if (s.includes('cloud') || s.includes('kitchen')) return 'Cloud Kitchen';
   if (s.includes('processing') || s.includes('paste') || s.includes('factor')) return 'Food Processing Factory';
   if (s.includes('distributor') || s.includes('wholesale')) return 'Wholesale Distributor';
-  return 'Hotel / Banquet';
+  return '';
 };
 
 const VALID_VOLUMES = ['1 Kg', '2 Kg', '5 Kg', '10 Kg', '15 Kg', '20 Kg', '25 Kg', '30 Kg', '50 Kg', '100 Kg', '100+ Kg'];
@@ -38,7 +38,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
   defaultSector,
 }) => {
   const [volume, setVolume] = useState('');
-  const [customerType, setCustomerType] = useState('Hotel / Banquet');
+  const [customerType, setCustomerType] = useState(defaultSector ? mapSector(defaultSector) : '');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [area, setArea] = useState('');
@@ -60,6 +60,8 @@ export const OrderModal: React.FC<OrderModalProps> = ({
 
     if (defaultSector) {
       setCustomerType(mapSector(defaultSector));
+    } else {
+      setCustomerType('');
     }
     setVolumeError(false);
   }, [defaultVolume, defaultSector, isOpen]);
@@ -160,6 +162,7 @@ Delivery Area: ${area || 'Ahmedabad'}`;
                 onChange={(e) => setCustomerType(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
               >
+                <option value="" disabled>Select Business Sector</option>
                 <option value="Hotel / Banquet">Hotel / Resort / Banquet</option>
                 <option value="Restaurant / Cafe">Restaurant / Cafe / Dhaba</option>
                 <option value="Catering Service">Catering & Event Service</option>

@@ -8,6 +8,7 @@ import {
   ExternalLink,
   Award,
   Users,
+  MessageCircle,
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/garlicData';
 
@@ -23,6 +24,10 @@ export const GrandOpeningSection: React.FC<GrandOpeningSectionProps> = ({ onOpen
   ];
 
   const mapUrl = COMPANY_INFO.mapUrl;
+
+  const sampleWhatsAppUrl = `https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
+    'Hi OM Enterprise, I would like to request a Free Sample of your peeled garlic for my restaurant / business. Please share sample details.'
+  )}`;
 
   return (
     <section id="grand-opening" className="py-14 sm:py-20 bg-white relative overflow-hidden font-sans">
@@ -159,12 +164,16 @@ export const GrandOpeningSection: React.FC<GrandOpeningSectionProps> = ({ onOpen
 
             {/* Bottom RSVP & Sample Request */}
             <div className="mt-8 pt-6 border-t border-gray-200 text-center flex flex-col sm:flex-row items-center justify-center gap-3">
-              <button
-                onClick={onOpenOrderModal}
-                className="w-full sm:w-auto px-8 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22] shadow-md hover:shadow-lg transition-all cursor-pointer"
+              <a
+                href={sampleWhatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+
+                className="w-full sm:w-auto px-8 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#C59B27] via-[#D4A346] to-[#2D4A22] shadow-md hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
               >
-                Request Free Sample at Event
-              </button>
+                <MessageCircle className="w-4 h-4 fill-white" />
+                <span>Request Free Sample</span>
+              </a>
 
               <a
                 href={mapUrl}
