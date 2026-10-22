@@ -129,14 +129,14 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onOpenOrde
           })}
         </div>
 
-        {/* Desktop 4-Card Grid */}
-        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Desktop 2-Card Grid */}
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
           {INDUSTRIES_ITEMS.map((item) => {
             const Icon = iconMap[item.icon] || Building2;
             return (
               <div
                 key={item.id}
-                className="rounded-3xl p-6 bg-white border border-[#2D4A22]/15 shadow-[0_6px_25px_rgba(45,74,34,0.06)] hover:shadow-[0_12px_40px_rgba(45,74,34,0.14)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
+                className="rounded-3xl p-6 sm:p-7 lg:p-8 bg-white border border-[#2D4A22]/15 shadow-[0_6px_25px_rgba(45,74,34,0.06)] hover:shadow-[0_12px_40px_rgba(45,74,34,0.14)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Card Icon & Header */}
@@ -152,7 +152,7 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onOpenOrde
                     </div>
                   </div>
 
-                  <p className="text-xs text-gray-600 leading-relaxed mb-4">{item.desc}</p>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">{item.desc}</p>
 
                   {/* Sector Benefits */}
                   <div className="space-y-2 mb-5">
