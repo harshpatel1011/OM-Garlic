@@ -13,8 +13,10 @@ import {
   ChevronRight,
   ExternalLink,
   MessageCircle,
+
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/garlicData';
+import { Instagram } from './InstagramIcon';
 
 interface FooterProps {
   onOpenOrderModal?: () => void;
@@ -191,6 +193,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
               <span className="px-3 py-1 rounded-full bg-[#1A3316] text-[#E5B945] border border-[#C59B27]/30 font-semibold">
                 Kathwada Facility
               </span>
+              <a href={COMPANY_INFO.instagram} target="_blank" rel="noopener noreferrer" className="px-3 py-1 rounded-full bg-gradient-to-r from-[#F58529]/20 to-[#DD2A7B]/20 hover:from-[#F58529]/35 hover:to-[#DD2A7B]/35 text-white border border-[#DD2A7B]/40 font-semibold inline-flex items-center gap-1.5 transition-all"><Instagram className="w-3.5 h-3.5 text-[#E5B945]" /><span>@{COMPANY_INFO.instagramHandle}</span></a>
               <span className="px-3 py-1 rounded-full bg-[#1A3316] text-white/90 border border-white/10 font-medium">
                 B2B Bulk Commercial Only
               </span>
@@ -261,6 +264,28 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
                 </div>
               </div>
               <span className="text-[11px] font-bold text-[#E5B945] group-hover:underline">Call</span>
+            </a>
+
+            {/* Instagram Official Page */}
+            <a
+              href={COMPANY_INFO.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-3 rounded-2xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 transition-colors group"
+            >
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Instagram className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase font-bold text-gray-400 block">Instagram</span>
+                  <span className="font-bold text-white text-xs">@{COMPANY_INFO.instagramHandle}</span>
+                </div>
+              </div>
+              <span className="text-[11px] font-bold text-[#E5B945] group-hover:underline flex items-center gap-1">
+                <span>Follow</span>
+                <ExternalLink className="w-3 h-3" />
+              </span>
             </a>
 
             {/* Operating Hours */}

@@ -10,8 +10,10 @@ import {
   CheckCircle2,
   Clock,
   ArrowRight,
+
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/garlicData';
+import { Instagram } from './InstagramIcon';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -105,6 +107,18 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
 
           {/* Right Action Buttons */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Instagram Quick Link */}
+            <a
+              href={COMPANY_INFO.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow OM Enterprise on Instagram"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold text-[#E1306C] bg-pink-50/70 border border-[#E1306C]/25 hover:bg-pink-100/70 transition-all"
+            >
+              <Instagram className="w-3.5 h-3.5 text-[#E1306C]" />
+              <span className="hidden xl:inline">@{COMPANY_INFO.instagramHandle}</span>
+            </a>
+
             {/* Phone Quick Dial - Desktop Only */}
             <a
               href={`tel:${COMPANY_INFO.phones.primary.replace(/\s+/g, '')}`}
@@ -342,6 +356,16 @@ export const Navbar: React.FC<NavbarProps> = ({ isScrolled, onOpenOrderModal }) 
           >
             <MessageCircle className="w-4 h-4 text-[#25D366]" />
             <span>Chat on WhatsApp</span>
+          </a>
+
+          <a
+            href={COMPANY_INFO.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-2.5 rounded-full text-xs font-bold text-[#E1306C] border border-[#E1306C]/30 bg-gradient-to-r from-[#FAF8F2] to-[#FFF5F5] hover:to-[#FFEBEB] flex items-center justify-center gap-2 transition-colors"
+          >
+            <Instagram className="w-4 h-4 text-[#E1306C]" />
+            <span>Follow @{COMPANY_INFO.instagramHandle}</span>
           </a>
         </div>
       </aside>

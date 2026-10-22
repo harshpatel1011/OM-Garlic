@@ -14,6 +14,8 @@ export const COMPANY_INFO = {
   },
   whatsapp: '917600501356',
   email: 'omenterprise.garlic@gmail.com',
+  instagram: 'https://www.instagram.com/omgarlic.in',
+  instagramHandle: 'omgarlic.in',
   mapUrl: 'https://maps.app.goo.gl/HuoBAppyrvFdwHH98',
   address: {
     plant: '79 VR Industrial Park-2, Kathwada Singarwa Road, Kathwada, Ahmedabad, Gujarat - 382430',
