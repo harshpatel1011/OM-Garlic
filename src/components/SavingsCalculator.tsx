@@ -105,7 +105,7 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ onOpenOrde
                   <span>5 Kg (Cafe / Dhaba)</span>
                   <span>25 Kg (Restaurant)</span>
                   <span>50 Kg (Hotel / Banquet)</span>
-                  <span>100+ Kg (Catering / Factory)</span>
+                  <span>100 Kg (Catering / Factory)</span>
                 </div>
 
                 {/* Mobile Slider Milestones: Clean & Compact */}
@@ -113,7 +113,7 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ onOpenOrde
                   <span>5 Kg</span>
                   <span>25 Kg</span>
                   <span>50 Kg</span>
-                  <span>100+ Kg</span>
+                  <span>100 Kg</span>
                 </div>
               </div>
 

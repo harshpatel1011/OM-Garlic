@@ -132,7 +132,7 @@ export const WHY_CHOOSE_ITEMS: FeatureItem[] = [
     color: '#2D4A22',
     highlights: [
       'Direct processor wholesale price advantage',
-      'Tiered bulk discounts for high-tonnage monthly consumers',
+      'Tiered bulk discounts for regular commercial consumers',
       'GST tax invoices with full commercial compliance',
       'Zero hidden freight charges within standard routes',
       'Price stability contracts for institutional buyers',
@@ -158,7 +158,7 @@ export const INDUSTRIES_ITEMS: IndustryItem[] = [
       'Standardized aroma profile for large batch cooking',
       'Priority early-morning doorstep delivery before 7:30 AM',
     ],
-    typicalVolume: '20kg - 150kg / day',
+    typicalVolume: '15kg - 50kg / day',
     packagingRecommendation: '5kg & 10kg Vacuum Bags',
   },
   {
@@ -173,7 +173,7 @@ export const INDUSTRIES_ITEMS: IndustryItem[] = [
       'Zero peeling mess, smelly hands, or rotting cloves',
       'Reliable scheduled daily morning dispatch',
     ],
-    typicalVolume: '10kg - 60kg / day',
+    typicalVolume: '5kg - 30kg / day',
     packagingRecommendation: '5kg & 10kg Pouches',
   },
   {
@@ -188,22 +188,22 @@ export const INDUSTRIES_ITEMS: IndustryItem[] = [
       'Consistent pungency ensures uniform large-batch seasoning',
       'Direct dispatch to event venue or central base kitchen',
     ],
-    typicalVolume: '25kg - 300kg / event',
+    typicalVolume: '20kg - 100kg / event',
     packagingRecommendation: '10kg & 20kg Vacuum Bags',
   },
   {
     id: 'food-industries',
     title: 'Food Processing & Paste Factories',
-    subtitle: 'Industrial Scale, Tonnage Capacity & Quality Compliance',
+    subtitle: 'Reliable Daily Batch Supply & Quality Compliance',
     icon: 'Factory',
-    desc: 'Commercial garlic paste manufacturers, namkeen factories, pickle makers, frozen food processors, and cloud kitchen clusters that require high-tonnage raw materials.',
+    desc: 'Commercial garlic paste manufacturers, namkeen factories, pickle makers, frozen food processors, and cloud kitchen clusters that require dependable daily bulk raw materials.',
     benefits: [
       'Strict moisture control & zero stone/skin impurities',
       'Consistent supply even during off-season market spikes',
       'Custom processing: whole cloves or crushed mash',
       'Bulk batch certificates and wholesale GST contracts',
     ],
-    typicalVolume: '100kg - 1,000kg+ / day',
+    typicalVolume: '50kg - 200kg / day',
     packagingRecommendation: '20kg & 50kg Sacks',
   },
 ];
@@ -263,7 +263,7 @@ export const PRODUCTS_ITEMS: ProductItem[] = [
   {
     id: 'bulk-industrial',
     title: 'Bulk Industrial Master Sacks',
-    subtitle: 'High Tonnage Food Processing Grade',
+    subtitle: 'Bulk Commercial Food Processing Grade',
     desc: 'Heavy-duty 20kg and 50kg master sacks tailored for namkeen makers, garlic paste factories, pickle manufacturers, and wholesale distributors.',
     tag: 'Wholesale Master Sacks',
     minOrder: '50 Kg',

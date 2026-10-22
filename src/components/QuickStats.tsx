@@ -5,7 +5,7 @@ export const QuickStats: React.FC = () => {
   const stats = [
     {
       icon: Scale,
-      value: '500+ Kg',
+      value: '200+ Kg',
       label: 'Daily Processing',
       desc: 'Consistent daily supply from our Kathwada facility',
       color: '#C59B27',

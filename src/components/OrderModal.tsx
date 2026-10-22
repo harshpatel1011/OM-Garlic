@@ -37,11 +37,12 @@ export const OrderModal: React.FC<OrderModalProps> = ({
   defaultVolume,
   defaultSector,
 }) => {
-  const [volume, setVolume] = useState('1 Kg');
+  const [volume, setVolume] = useState('');
   const [customerType, setCustomerType] = useState('Hotel / Banquet');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [area, setArea] = useState('');
+  const [volumeError, setVolumeError] = useState(false);
 
   useEffect(() => {
     if (defaultVolume) {
@@ -51,21 +52,27 @@ export const OrderModal: React.FC<OrderModalProps> = ({
       } else if (VALID_VOLUMES.includes(defaultVolume)) {
         setVolume(defaultVolume);
       } else {
-        setVolume('1 Kg');
+        setVolume('');
       }
     } else {
-      setVolume('1 Kg');
+      setVolume('');
     }
 
     if (defaultSector) {
       setCustomerType(mapSector(defaultSector));
     }
+    setVolumeError(false);
   }, [defaultVolume, defaultSector, isOpen]);
 
   if (!isOpen) return null;
 
   const handleWhatsAppSend = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!volume) {
+      setVolumeError(true);
+      return;
+    }
 
     const msg = `*New Order Booking - OM Enterprise Peeled Garlic*
 Quantity: ${volume}
@@ -116,18 +123,34 @@ Delivery Area: ${area || 'Ahmedabad'}`;
           {/* Quantity & Business Sector */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="font-bold text-gray-700 block mb-1">Quantity</label>
+              <label className="font-bold text-gray-700 block mb-1">Quantity *</label>
               <select
+                required
                 value={volume}
-                onChange={(e) => setVolume(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
+                onChange={(e) => {
+                  setVolume(e.target.value);
+                  if (e.target.value) setVolumeError(false);
+                }}
+                className={`w-full px-3.5 py-2.5 rounded-xl border focus:outline-none bg-[#FAF8F2] cursor-pointer transition-colors ${
+                  volumeError
+                    ? 'border-gray-900 ring-1 ring-gray-900'
+                    : 'border-gray-200 focus:border-[#2D4A22]'
+                }`}
               >
+                <option value="" disabled>
+                  Select Quantity
+                </option>
                 {VALID_VOLUMES.map((vol) => (
                   <option key={vol} value={vol}>
                     {vol}
                   </option>
                 ))}
               </select>
+              {volumeError && (
+                <span className="text-[10.5px] text-gray-800 font-semibold block mt-1">
+                  Please select a quantity to place order.
+                </span>
+              )}
             </div>
 
             <div>
