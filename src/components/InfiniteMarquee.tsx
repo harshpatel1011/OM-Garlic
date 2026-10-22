@@ -22,7 +22,7 @@ export const InfiniteMarquee: React.FC = () => {
 
       {/* Marquee Track */}
       <div className="animate-marquee flex items-center gap-8 text-[#FAF8F2] text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">
-        {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, idx) => {
+        {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, idx) => {
           const Icon = item.icon;
           return (
             <div key={idx} className="flex items-center gap-2.5 shrink-0">

@@ -100,11 +100,20 @@ export const SavingsCalculator: React.FC<SavingsCalculatorProps> = ({ onOpenOrde
                   className="w-full h-2.5 bg-[#FAF8F2] rounded-lg appearance-none cursor-pointer accent-[#2D4A22] border border-gray-200"
                 />
 
-                <div className="flex justify-between text-[11px] font-semibold text-gray-400 mt-2">
+                {/* Desktop Slider Milestones */}
+                <div className="hidden sm:flex justify-between text-[11px] font-semibold text-gray-400 mt-2">
                   <span>5 Kg (Cafe / Dhaba)</span>
                   <span>25 Kg (Restaurant)</span>
                   <span>50 Kg (Hotel / Banquet)</span>
                   <span>100+ Kg (Catering / Factory)</span>
+                </div>
+
+                {/* Mobile Slider Milestones: Clean & Compact */}
+                <div className="flex sm:hidden justify-between text-[11px] font-bold text-gray-500 mt-2 px-1">
+                  <span>5 Kg</span>
+                  <span>25 Kg</span>
+                  <span>50 Kg</span>
+                  <span>100+ Kg</span>
                 </div>
               </div>
 

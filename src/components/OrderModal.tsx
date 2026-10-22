@@ -13,25 +13,54 @@ interface OrderModalProps {
   onClose: () => void;
   defaultProduct?: string;
   defaultVolume?: string;
+  defaultSector?: string;
 }
+
+const mapSector = (sec?: string): string => {
+  if (!sec) return 'Hotel / Banquet';
+  const s = sec.toLowerCase();
+  if (s.includes('hotel') || s.includes('banquet') || s.includes('resort')) return 'Hotel / Banquet';
+  if (s.includes('restaurant') || s.includes('dhaba') || s.includes('cafe')) return 'Restaurant / Cafe';
+  if (s.includes('cater')) return 'Catering Service';
+  if (s.includes('cloud') || s.includes('kitchen')) return 'Cloud Kitchen';
+  if (s.includes('processing') || s.includes('paste') || s.includes('factor')) return 'Food Processing Factory';
+  if (s.includes('distributor') || s.includes('wholesale')) return 'Wholesale Distributor';
+  return 'Hotel / Banquet';
+};
+
+const VALID_VOLUMES = ['1 Kg', '2 Kg', '5 Kg', '10 Kg', '15 Kg', '20 Kg', '25 Kg', '30 Kg', '50 Kg', '100 Kg', '100+ Kg'];
 
 export const OrderModal: React.FC<OrderModalProps> = ({
   isOpen,
   onClose,
   defaultProduct,
   defaultVolume,
+  defaultSector,
 }) => {
-  const [volume, setVolume] = useState(defaultVolume || '5 Kg');
-  const [customerType, setCustomerType] = useState('Restaurant');
+  const [volume, setVolume] = useState('1 Kg');
+  const [customerType, setCustomerType] = useState('Hotel / Banquet');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [area, setArea] = useState('');
 
   useEffect(() => {
     if (defaultVolume) {
-      setVolume(defaultVolume);
+      const match = defaultVolume.match(/^(\d+\+?\s*Kg)/i);
+      if (match && VALID_VOLUMES.includes(match[1])) {
+        setVolume(match[1]);
+      } else if (VALID_VOLUMES.includes(defaultVolume)) {
+        setVolume(defaultVolume);
+      } else {
+        setVolume('1 Kg');
+      }
+    } else {
+      setVolume('1 Kg');
     }
-  }, [defaultVolume, isOpen]);
+
+    if (defaultSector) {
+      setCustomerType(mapSector(defaultSector));
+    }
+  }, [defaultVolume, defaultSector, isOpen]);
 
   if (!isOpen) return null;
 
@@ -93,19 +122,11 @@ Delivery Area: ${area || 'Ahmedabad'}`;
                 onChange={(e) => setVolume(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
               >
-                {!['5 Kg', '10 Kg', '15 Kg', '20 Kg', '25 Kg', '30 Kg', '50 Kg', '100 Kg', '100+ Kg', '500+ Kg'].includes(volume) && (
-                  <option value={volume}>{volume}</option>
-                )}
-                <option value="5 Kg">5 Kg</option>
-                <option value="10 Kg">10 Kg</option>
-                <option value="15 Kg">15 Kg</option>
-                <option value="20 Kg">20 Kg</option>
-                <option value="25 Kg">25 Kg</option>
-                <option value="30 Kg">30 Kg</option>
-                <option value="50 Kg">50 Kg</option>
-                <option value="100 Kg">100 Kg</option>
-                <option value="100+ Kg">100+ Kg</option>
-                <option value="500+ Kg">500+ Kg</option>
+                {VALID_VOLUMES.map((vol) => (
+                  <option key={vol} value={vol}>
+                    {vol}
+                  </option>
+                ))}
               </select>
             </div>
 

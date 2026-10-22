@@ -230,11 +230,11 @@ Notes: ${formData.notes || 'None'}`;
                       onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#2D4A22] bg-[#FAF8F2] cursor-pointer"
                     >
+                      <option value="1 - 2 Kg/day">1 - 2 Kg/day</option>
                       <option value="5 - 10 Kg/day">5 - 10 Kg/day</option>
                       <option value="15 - 30 Kg/day">15 - 30 Kg/day</option>
                       <option value="50 - 100 Kg/day">50 - 100 Kg/day</option>
                       <option value="100+ Kg/day">100+ Kg/day</option>
-                      <option value="5 Kg Sample">5 Kg Trial Sample</option>
                     </select>
                   </div>
                 </div>

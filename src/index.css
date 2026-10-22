@@ -85,10 +85,18 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 30s linear infinite;
+  animation: marquee 60s linear infinite;
+  will-change: transform;
 }
 
-.animate-marquee:hover {
+@media (min-width: 640px) {
+  .animate-marquee {
+    animation-duration: 35s;
+  }
+}
+
+.animate-marquee:hover,
+.animate-marquee:active {
   animation-play-state: paused;
 }
 

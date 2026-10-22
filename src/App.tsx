@@ -21,6 +21,7 @@ export function App() {
   const [orderModalOpen, setOrderModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<string | undefined>();
   const [selectedVolume, setSelectedVolume] = useState<string | undefined>();
+  const [selectedSector, setSelectedSector] = useState<string | undefined>();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +36,10 @@ export function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleOpenOrder = (product?: string, volume?: string) => {
-    setSelectedProduct(product);
-    setSelectedVolume(volume);
+  const handleOpenOrder = (options?: { volume?: string; sector?: string; product?: string }) => {
+    setSelectedProduct(options?.product);
+    setSelectedVolume(options?.volume);
+    setSelectedSector(options?.sector);
     setOrderModalOpen(true);
   };
 
@@ -76,19 +78,17 @@ export function App() {
 
         {/* Industries We Serve (Homes, Hotels, Restaurants, Food Industries) */}
         <IndustriesSection
-          onOpenOrderModal={(industry) =>
-            handleOpenOrder(undefined, industry ? `For ${industry}` : undefined)
-          }
+          onOpenOrderModal={(industry) => handleOpenOrder({ sector: industry })}
         />
 
         {/* Products Showcase (Mobile Touch Swipe + Desktop Grid) */}
         <ProductsSection
-          onOpenOrderModal={(product) => handleOpenOrder(product)}
+          onOpenOrderModal={(product) => handleOpenOrder({ product })}
         />
 
         {/* Interactive Kitchen Labor & Waste Savings Calculator */}
         <SavingsCalculator
-          onOpenOrderModal={(volume) => handleOpenOrder(undefined, volume)}
+          onOpenOrderModal={(volume) => handleOpenOrder({ volume })}
         />
 
         {/* Grand Opening Ceremony (Patel Family & Kathwada Venue) */}
@@ -116,6 +116,7 @@ export function App() {
         onClose={() => setOrderModalOpen(false)}
         defaultProduct={selectedProduct}
         defaultVolume={selectedVolume}
+        defaultSector={selectedSector}
       />
     </div>
   );

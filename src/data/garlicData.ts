@@ -302,7 +302,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: 'Orders & Deliveries',
     question: 'What is the minimum order quantity for commercial businesses?',
     answer:
-      'We cater strictly to B2B bulk orders (Hotels, Restaurants, Caterers, Cloud Kitchens, and Food Processing Units). Our minimum delivery batch is 5 kg in Nikol & Kathwada, and 10 kg across wider Ahmedabad with scheduled daily delivery slots.',
+      'We cater to commercial food businesses with orders starting from 1 kg (1kg, 2kg, 5kg, 10kg, 15kg, 20kg, 25kg, 30kg, 50kg, 100kg+). We provide scheduled daily morning delivery across Kathwada and throughout Ahmedabad.',
   },
   {
     category: 'Samples & Pricing',
